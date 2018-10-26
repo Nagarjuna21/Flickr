@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,14 +18,98 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0Lj-v2-w48">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FRX-mh-k7N">
+                                    <size key="itemSize" width="168" height="173"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="flickrFeedCell" id="Db9-yq-htp" customClass="FlickrFeedCell" customModule="FlickrPhotoPublic" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="168" height="173"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="168" height="173"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eGL-9m-AyI">
+                                                    <rect key="frame" x="0.0" y="0.0" width="168" height="173"/>
+                                                    <color key="backgroundColor" red="0.94258779290000005" green="0.77967440310000002" blue="0.63387286809999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s1H-P9-tBJ">
+                                                    <rect key="frame" x="10" y="122" width="153" height="20"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tHd-GC-2El">
+                                                    <rect key="frame" x="10" y="147" width="153" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="widthHeight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lAB-Ac-N8e">
+                                                    <rect key="frame" x="91" y="18" width="63" height="13"/>
+                                                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="11"/>
+                                                    <color key="textColor" red="0.067341608829999997" green="1" blue="0.46634716469999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="RGBDensity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IrM-5g-cpV">
+                                                    <rect key="frame" x="95" y="39" width="59" height="12"/>
+                                                    <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="10"/>
+                                                    <color key="textColor" red="0.040332641799999999" green="1" blue="0.42507424199999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="tHd-GC-2El" secondAttribute="bottom" constant="5" id="25R-Zy-m6N"/>
+                                            <constraint firstItem="tHd-GC-2El" firstAttribute="top" secondItem="s1H-P9-tBJ" secondAttribute="bottom" constant="5" id="35P-mr-7dE"/>
+                                            <constraint firstAttribute="trailing" secondItem="eGL-9m-AyI" secondAttribute="trailing" id="842-in-aFs"/>
+                                            <constraint firstAttribute="trailing" secondItem="s1H-P9-tBJ" secondAttribute="trailing" constant="5" id="8qY-NJ-B9D"/>
+                                            <constraint firstItem="lAB-Ac-N8e" firstAttribute="top" secondItem="Db9-yq-htp" secondAttribute="topMargin" constant="10" id="AEC-KK-lbb"/>
+                                            <constraint firstItem="IrM-5g-cpV" firstAttribute="top" secondItem="lAB-Ac-N8e" secondAttribute="bottom" constant="8" id="JpE-yE-Zak"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="IrM-5g-cpV" secondAttribute="trailing" constant="6" id="VEx-E7-ePf"/>
+                                            <constraint firstItem="eGL-9m-AyI" firstAttribute="leading" secondItem="Db9-yq-htp" secondAttribute="leading" id="Xir-42-zm6"/>
+                                            <constraint firstItem="tHd-GC-2El" firstAttribute="leading" secondItem="Db9-yq-htp" secondAttribute="leading" constant="10" id="aCh-id-9gZ"/>
+                                            <constraint firstItem="eGL-9m-AyI" firstAttribute="top" secondItem="Db9-yq-htp" secondAttribute="top" id="ac3-D7-rk6"/>
+                                            <constraint firstAttribute="bottom" secondItem="eGL-9m-AyI" secondAttribute="bottom" id="bpi-fg-GBC"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="lAB-Ac-N8e" secondAttribute="trailing" constant="6" id="e0d-7p-ECS"/>
+                                            <constraint firstItem="s1H-P9-tBJ" firstAttribute="leading" secondItem="Db9-yq-htp" secondAttribute="leading" constant="10" id="nkA-fm-szG"/>
+                                            <constraint firstAttribute="trailing" secondItem="tHd-GC-2El" secondAttribute="trailing" constant="5" id="szg-Ua-IKv"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="dateTaken" destination="tHd-GC-2El" id="S9V-TL-Ncy"/>
+                                            <outlet property="densityRGB" destination="IrM-5g-cpV" id="csK-o1-dq3"/>
+                                            <outlet property="imageView" destination="eGL-9m-AyI" id="H6p-CH-IMD"/>
+                                            <outlet property="title" destination="s1H-P9-tBJ" id="Y0G-VX-eeu"/>
+                                            <outlet property="widthHeight" destination="lAB-Ac-N8e" id="lHl-GL-whA"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" red="0.95926243730000005" green="0.99973355549999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="0Lj-v2-w48" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="3ca-BG-oLY"/>
+                            <constraint firstItem="0Lj-v2-w48" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="3ir-IO-t0u"/>
+                            <constraint firstItem="0Lj-v2-w48" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="KEH-gp-Rrk"/>
+                            <constraint firstItem="0Lj-v2-w48" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Utw-8L-Kd2"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="FlickrFeed" id="2sX-hq-VcA"/>
+                    <connections>
+                        <outlet property="collectionView" destination="0Lj-v2-w48" id="s2W-db-CXL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="860" y="146"/>
+            <point key="canvasLocation" x="860" y="145.27736131934034"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tsC-LS-eKz">

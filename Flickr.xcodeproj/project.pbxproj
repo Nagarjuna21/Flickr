@@ -22,6 +22,10 @@
 		7B738B4721831E9D00A29EF1 /* FlickrFeedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B738B4621831E9D00A29EF1 /* FlickrFeedUITests.swift */; };
 		7B738B49218321AD00A29EF1 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B738B48218321AD00A29EF1 /* Date+Extension.swift */; };
 		7B738B4D218322E500A29EF1 /* FlickrFeedServiceProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B738B4C218322E500A29EF1 /* FlickrFeedServiceProtocolStub.swift */; };
+		7B738B4F2183494100A29EF1 /* FlickrFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B738B4E2183494100A29EF1 /* FlickrFeedCell.swift */; };
+		7B738B5121834BC100A29EF1 /* FlickrFeedDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B738B5021834BC100A29EF1 /* FlickrFeedDataSource.swift */; };
+		7B738B5321834BD400A29EF1 /* FlickrFeedFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B738B5221834BD400A29EF1 /* FlickrFeedFlowLayout.swift */; };
+		7B738B5521834D6F00A29EF1 /* ImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B738B5421834D6F00A29EF1 /* ImageView+Extension.swift */; };
 		91CAFD7E64CED4782B3B4941 /* Pods_FlickrTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB674A3399755105573AF91B /* Pods_FlickrTests.framework */; };
 		E12B498B0314158F0C20F603 /* Pods_FlickrUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15EE2160AE1746C893082C70 /* Pods_FlickrUITests.framework */; };
 /* End PBXBuildFile section */
@@ -71,6 +75,10 @@
 		7B738B4621831E9D00A29EF1 /* FlickrFeedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrFeedUITests.swift; sourceTree = "<group>"; };
 		7B738B48218321AD00A29EF1 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		7B738B4C218322E500A29EF1 /* FlickrFeedServiceProtocolStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrFeedServiceProtocolStub.swift; sourceTree = "<group>"; };
+		7B738B4E2183494100A29EF1 /* FlickrFeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrFeedCell.swift; sourceTree = "<group>"; };
+		7B738B5021834BC100A29EF1 /* FlickrFeedDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrFeedDataSource.swift; sourceTree = "<group>"; };
+		7B738B5221834BD400A29EF1 /* FlickrFeedFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrFeedFlowLayout.swift; sourceTree = "<group>"; };
+		7B738B5421834D6F00A29EF1 /* ImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageView+Extension.swift"; sourceTree = "<group>"; };
 		A0AD5A4017D5854B16AE3E6B /* Pods-Flickr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flickr.release.xcconfig"; path = "Pods/Target Support Files/Pods-Flickr/Pods-Flickr.release.xcconfig"; sourceTree = "<group>"; };
 		FB674A3399755105573AF91B /* Pods_FlickrTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlickrTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -195,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				7B738B48218321AD00A29EF1 /* Date+Extension.swift */,
+				7B738B5421834D6F00A29EF1 /* ImageView+Extension.swift */,
 			);
 			path = Platform;
 			sourceTree = "<group>";
@@ -230,6 +239,8 @@
 			isa = PBXGroup;
 			children = (
 				7B738B3021831ACF00A29EF1 /* FlickrFeedViewModel.swift */,
+				7B738B5021834BC100A29EF1 /* FlickrFeedDataSource.swift */,
+				7B738B5221834BD400A29EF1 /* FlickrFeedFlowLayout.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -245,6 +256,7 @@
 		7B738B2D2183191300A29EF1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7B738B4E2183494100A29EF1 /* FlickrFeedCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -542,10 +554,14 @@
 			files = (
 				7B738B3321831AEF00A29EF1 /* FlickrFeedViewController.swift in Sources */,
 				7B738B3A21831B4500A29EF1 /* FlickrFeed.swift in Sources */,
+				7B738B5521834D6F00A29EF1 /* ImageView+Extension.swift in Sources */,
+				7B738B5321834BD400A29EF1 /* FlickrFeedFlowLayout.swift in Sources */,
 				7B738AF92183184000A29EF1 /* AppDelegate.swift in Sources */,
 				7B738B3721831B2800A29EF1 /* FlickrFeedService.swift in Sources */,
 				7B738B49218321AD00A29EF1 /* Date+Extension.swift in Sources */,
 				7B738B3121831ACF00A29EF1 /* FlickrFeedViewModel.swift in Sources */,
+				7B738B5121834BC100A29EF1 /* FlickrFeedDataSource.swift in Sources */,
+				7B738B4F2183494100A29EF1 /* FlickrFeedCell.swift in Sources */,
 				7B738B4521831CB500A29EF1 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
